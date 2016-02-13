@@ -21,5 +21,8 @@ public class BuscarNumeroCaracteres
 	public void mensaje( char c )
 	{
 		System.out.printf("Se a encontrado %d %c", contador, c);
+		
+		contador = 0; // Establece contador a 0 para volver a contar el nro de veces
+					  // que se repite cierto carácter
 	}
 }
