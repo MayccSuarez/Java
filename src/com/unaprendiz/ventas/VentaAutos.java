@@ -1,6 +1,8 @@
 
 package com.unaprendiz.ventas;
 
+import java.util.Scanner;
+
 /**
  *
  * @author raptor
@@ -16,7 +18,37 @@ public class VentaAutos {
     
     public static void main(String[] args) {
         
-   
+       
+        String nombreVendedor;
+        String opcion;
+        double costoAuto;
+        double salario = 500;
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Ingrese el nombre del vendedor: ");
+        nombreVendedor = entrada.next();
+        
+        System.out.print(nombreVendedor +" ha vendido autos (s=si)? ");
+        opcion = entrada.next();
+        
+        if(opcion.equalsIgnoreCase("s")){
+            
+            do{
+                System.out.print("Valor del auto vendido: ");
+                costoAuto = entrada.nextDouble();
+            
+                salario += 20 + (costoAuto*0.05);
+            
+                System.out.print("Desea ingresar el precio de otro auto (s = 'si')? ");
+                opcion = entrada.next();
+            
+            }while(opcion.equalsIgnoreCase("s"));
+            
+            System.out.println("El salario mensual de " +nombreVendedor +" es de: " +salario +" dólares");
+            
+        }else
+            System.out.println("El salario mensual de " +nombreVendedor +" es de: " +salario +" dólares");
         
     }      
 }
