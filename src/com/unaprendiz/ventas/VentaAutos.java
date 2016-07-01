@@ -24,7 +24,7 @@ public class VentaAutos {
         String opcion;
         double costoAuto;
         double salario = 500;
-        int contador = 0;
+        int contador = 0;   // contar autos vendidos
         
         
         Scanner entrada = new Scanner(System.in);
@@ -35,6 +35,7 @@ public class VentaAutos {
         System.out.print(nombreVendedor +" ha vendido autos (s=si)? ");
         opcion = entrada.next();
         
+        // Si vendedor a logrado vender autos se realizan las operaciones
         if(opcion.equalsIgnoreCase("s")){
             
             do{
@@ -53,7 +54,8 @@ public class VentaAutos {
             
             System.out.printf("%s ha vendido %d auto(s) usado(s)\n", nombreVendedor, contador);
             System.out.println("El salario mensual de " +nombreVendedor +" es de: " +salario +" dólares");
-            
+        
+        // De lo contrario sólo se le paga el sueldo de $500
         }else{
             System.out.printf("%s no ha vendido ningún auto\n", nombreVendedor);
             System.out.println("El salario mensual de " +nombreVendedor +" es de: " +salario +" dólares");
