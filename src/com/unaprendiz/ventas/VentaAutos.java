@@ -14,6 +14,7 @@ public class VentaAutos {
     más el 5% del valor de la venta por carro.
     Cada mes la secretaria de la empresa ingresa en la computadora los datos pertinentes.
     Diseñar y codificar un algoritmo que calcule e imprima el salario mensual de un vendedor dado. 
+    Además deberá mostrar el número de autos vendidos por el vendedor.
     */
     
     public static void main(String[] args) {
