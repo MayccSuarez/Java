@@ -24,6 +24,8 @@ public class VentaAutos {
         String opcion;
         double costoAuto;
         double salario = 500;
+        int contador = 0;
+        
         
         Scanner entrada = new Scanner(System.in);
         
@@ -36,9 +38,12 @@ public class VentaAutos {
         if(opcion.equalsIgnoreCase("s")){
             
             do{
+                
+                contador++;
+                
                 System.out.print("Valor del auto vendido: ");
                 costoAuto = entrada.nextDouble();
-            
+                
                 salario += 20 + (costoAuto*0.05);
             
                 System.out.print("Desea ingresar el precio de otro auto (s = 'si')? ");
@@ -46,10 +51,12 @@ public class VentaAutos {
             
             }while(opcion.equalsIgnoreCase("s"));
             
+            System.out.printf("%s ha vendido %d auto(s) usado(s)\n", nombreVendedor, contador);
             System.out.println("El salario mensual de " +nombreVendedor +" es de: " +salario +" dólares");
             
-        }else
+        }else{
+            System.out.printf("%s no ha vendido ningún auto\n", nombreVendedor);
             System.out.println("El salario mensual de " +nombreVendedor +" es de: " +salario +" dólares");
-        
+        }
     }      
 }
